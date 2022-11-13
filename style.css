@@ -1,26 +1,82 @@
-body {
-  font-family: "Playfair Display", serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html {
+  scroll-behavior: smooth;
 }
-a {
-  text-decoration: none;
+
+body {
+font-family: 'Nanum Myeongjo', serif;}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
   color: black;
 }
 
-.ul {
-  list-style-type: none;
+.container {
+  display: flex;
+  padding: 1.5%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+ul {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  list-style: none;
 }
 
-.ul li {
-  align-items: center;
-  margin-left: 5%;
-}
-.logo {
-  font-family: Arial, Helvetica, sans-serif;
+nav > ul > li {
+  display: inline-block;
+  padding-left: 10%;
 }
 
+a {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  /* padding: 8px 0; */
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+a:before,
+a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  background: #fff;
+}
+
+a:before {
+  left: 0;
+}
+a:after {
+  right: 0;
+  background: black;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  color: black;
+}
+
+a:hover:before {
+  background: black;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a:hover:after {
+  background: transparent;
+  /* width: 100%; */
+  transition: 0s;
+}
 .image {
   width: 100%;
   height: 50%;
@@ -32,6 +88,11 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  background-color:rgba(0, 0, 0, 0.582);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 20%;
 }
 .image-text {
   position: relative;
@@ -45,7 +106,7 @@ a {
 
 .img-cent p {
   font-size: 20px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .head2 {
@@ -80,3 +141,58 @@ a {
   margin-bottom: 5%;
 }
 
+.about-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 86%;
+  margin: auto;
+  background-color: #f1f1f1;
+}
+
+.about-desc {
+  text-align: center;
+  padding: 3%;
+  word-spacing: 5px;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.height {
+  display: flex;
+  align-items: center;
+  height: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.height-wrap {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  margin-top: 6rem;
+  /* width: 86%; */
+  margin: auto;
+  /* background-image: url("images/ibada.jpeg"); */
+  color: white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.bg {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.upana {
+  width: 85%;
+}
