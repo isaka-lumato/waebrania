@@ -38,3 +38,22 @@ ibada.forEach((ibada, index) => {
   time.innerHTML = ibada.time
   ibadali.appendChild(time);
 })
+
+window.addEventListener('scroll', reveal)
+
+function reveal () {
+  var reveals = document.querySelectorAll('.reveals')
+  for(var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight
+    var revealTop = reveals[i].getBoundingClientRect().top
+    var revealPont = 150;
+
+    if (revealTop < windowHeight - revealPont) {
+      reveals[i].classList.add('active')
+    }
+    else {
+      reveals[i].classList.remove('active')
+    }
+  }
+  
+}
